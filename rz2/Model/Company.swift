@@ -62,11 +62,9 @@ class Company : Mappable {
             if let result = response.result.value as? [String : Any] {
                 if let data = result["data"] as? [String : Any] {
                     if let unitsDictionary = data["units"] as? [[String : Any]] {
-                        if let units = [Unit](JSONArray: unitsDictionary) {
-                            completionBlock(units, nil)
-                        } else if let error = response.result.error {
-                            completionBlock(nil, error)
-                        }
+                        completionBlock(unitsDictionary, nil)
+                    } else if let error = response.result.error {
+                        completionBlock(nil, error)
                     }
                 }
             }
@@ -77,4 +75,4 @@ class Company : Mappable {
 }
 
 typealias CompanyCompletionBlock = (_ company: Company?, _ error: Error?) -> Void
-typealias UnitsCompletionBlock = (_ units: [Unit]?, _ error: Error?) -> Void
+typealias UnitsCompletionBlock = (_ units: [[String : Any]]?, _ error: Error?) -> Void

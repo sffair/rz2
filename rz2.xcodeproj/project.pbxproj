@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		199CE4FB1F164A8B00712367 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CE4FA1F164A8B00712367 /* CoreData.framework */; };
+		199CE5021F16538A00712367 /* Data.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 199CE5011F16538A00712367 /* Data.xcdatamodel */; };
+		199CE5041F165BA500712367 /* UnitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CE5031F165BA500712367 /* UnitsTableViewController.swift */; };
 		19E327161F1596DA0035CE9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327151F1596DA0035CE9E /* AppDelegate.swift */; };
 		19E3271B1F1596DA0035CE9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E327191F1596DA0035CE9E /* Main.storyboard */; };
 		19E3271D1F1596DA0035CE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E3271C1F1596DA0035CE9E /* Assets.xcassets */; };
@@ -14,13 +17,9 @@
 		19E3272B1F1596DA0035CE9E /* rz2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3272A1F1596DA0035CE9E /* rz2Tests.swift */; };
 		19E327361F1596DA0035CE9E /* rz2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327351F1596DA0035CE9E /* rz2UITests.swift */; };
 		19E327481F15A2540035CE9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327471F15A2540035CE9E /* Constants.swift */; };
-		19E3274A1F15A43D0035CE9E /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327491F15A43D0035CE9E /* Unit.swift */; };
 		19E3274D1F15A9DC0035CE9E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3274C1F15A9DC0035CE9E /* API.swift */; };
 		19E3274F1F15B2330035CE9E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3274E1F15B2330035CE9E /* LoginViewController.swift */; };
 		19E327511F15B2A20035CE9E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327501F15B2A20035CE9E /* Company.swift */; };
-		19E327531F15C3600035CE9E /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327521F15C3600035CE9E /* Country.swift */; };
-		19E327551F15C3690035CE9E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327541F15C3690035CE9E /* State.swift */; };
-		19E327571F15C3700035CE9E /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327561F15C3700035CE9E /* City.swift */; };
 		67857D01E39D94A55F75C671 /* Pods_rz2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB4C4E9904530FC0E17041A /* Pods_rz2.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		199CE4FA1F164A8B00712367 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		199CE5011F16538A00712367 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		199CE5031F165BA500712367 /* UnitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsTableViewController.swift; sourceTree = "<group>"; };
 		19E327121F1596DA0035CE9E /* rz2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rz2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E327151F1596DA0035CE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E3271A1F1596DA0035CE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,13 +57,9 @@
 		19E327351F1596DA0035CE9E /* rz2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rz2UITests.swift; sourceTree = "<group>"; };
 		19E327371F1596DA0035CE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19E327471F15A2540035CE9E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		19E327491F15A43D0035CE9E /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		19E3274C1F15A9DC0035CE9E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		19E3274E1F15B2330035CE9E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		19E327501F15B2A20035CE9E /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		19E327521F15C3600035CE9E /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		19E327541F15C3690035CE9E /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		19E327561F15C3700035CE9E /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		AAE2AFB1855A36A2BAC52362 /* Pods-rz2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rz2.release.xcconfig"; path = "Pods/Target Support Files/Pods-rz2/Pods-rz2.release.xcconfig"; sourceTree = "<group>"; };
 		B17E57499528D1D47762E705 /* Pods-rz2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rz2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rz2/Pods-rz2.debug.xcconfig"; sourceTree = "<group>"; };
 		EDB4C4E9904530FC0E17041A /* Pods_rz2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rz2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199CE4FB1F164A8B00712367 /* CoreData.framework in Frameworks */,
 				67857D01E39D94A55F75C671 /* Pods_rz2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +136,7 @@
 				19E3271C1F1596DA0035CE9E /* Assets.xcassets */,
 				19E3271E1F1596DA0035CE9E /* LaunchScreen.storyboard */,
 				19E327211F1596DA0035CE9E /* Info.plist */,
+				199CE5011F16538A00712367 /* Data.xcdatamodel */,
 			);
 			path = rz2;
 			sourceTree = "<group>";
@@ -163,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				19E3274E1F15B2330035CE9E /* LoginViewController.swift */,
+				199CE5031F165BA500712367 /* UnitsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,11 +171,7 @@
 		19E327441F15A2230035CE9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				19E327491F15A43D0035CE9E /* Unit.swift */,
 				19E327501F15B2A20035CE9E /* Company.swift */,
-				19E327521F15C3600035CE9E /* Country.swift */,
-				19E327541F15C3690035CE9E /* State.swift */,
-				19E327561F15C3700035CE9E /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +203,7 @@
 		E9A5551543A5947A8FA533D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				199CE4FA1F164A8B00712367 /* CoreData.framework */,
 				EDB4C4E9904530FC0E17041A /* Pods_rz2.framework */,
 			);
 			name = Frameworks;
@@ -399,15 +397,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19E327531F15C3600035CE9E /* Country.swift in Sources */,
 				19E327161F1596DA0035CE9E /* AppDelegate.swift in Sources */,
-				19E327571F15C3700035CE9E /* City.swift in Sources */,
+				199CE5041F165BA500712367 /* UnitsTableViewController.swift in Sources */,
 				19E3274D1F15A9DC0035CE9E /* API.swift in Sources */,
+				199CE5021F16538A00712367 /* Data.xcdatamodel in Sources */,
 				19E327481F15A2540035CE9E /* Constants.swift in Sources */,
 				19E3274F1F15B2330035CE9E /* LoginViewController.swift in Sources */,
-				19E3274A1F15A43D0035CE9E /* Unit.swift in Sources */,
 				19E327511F15B2A20035CE9E /* Company.swift in Sources */,
-				19E327551F15C3690035CE9E /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,9 @@ target 'rz2' do
     pod 'Alamofire', '~> 4.0'
     pod 'AlamofireObjectMapper'
 
+    #coreData
+    pod 'Sync', '~> 3'
+
     #utils
 	pod "KRProgressHUD"
 
