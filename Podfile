@@ -12,7 +12,4 @@ target 'rz2' do
     #coreData
     pod 'Sync', '~> 3'
 
-    #utils
-	pod "KRProgressHUD"
-
 end

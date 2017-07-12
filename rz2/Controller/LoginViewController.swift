@@ -9,8 +9,6 @@
 import UIKit
 import Sync
 import CoreData
-import KRProgressHUD
-
 
 //MARK: - Structs
 struct Segues {
