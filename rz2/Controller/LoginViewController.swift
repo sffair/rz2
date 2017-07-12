@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
         })
     }
     
-    //Após login feito, para buscar as unidades, realiza um get pelo modelo da company que passa o token no header e persiste os dados no CoreData e termina a animação
+    //Após login feito, para buscar as unidades, realiza um get com o token e persiste os dados no CoreData e termina a animação
     func getUnits() {
         self.company?.getUnits() {
             (units, error) in

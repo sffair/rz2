@@ -17,17 +17,18 @@ struct Cells {
 class UnitsTableViewController: UITableViewController {
 
     //MARK: - Models
-    let store = Store()
     var items = [NSManagedObject]() {
         didSet {
             tableView.reloadData()
         }
     }
     
+    let store = Store()
+    
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let units = self.store.fetch() {
+        if let units = store.fetch() {
             self.items = units
         }
         
