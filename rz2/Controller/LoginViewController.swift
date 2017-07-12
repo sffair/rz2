@@ -7,28 +7,45 @@
 //
 
 import UIKit
+import Sync
+import CoreData
+import KRProgressHUD
 
 class LoginViewController: UIViewController {
 
+    lazy var dataStack: DataStack = DataStack(modelName: "Data")
+    
+    var items = [NSManagedObject]()
+    
     private var company : Company? {
         didSet {
             self.company?.getUnits(token: (self.company?.token)!, completionBlock: { (units, error) in
-                if error == nil {
-                    self.units = units
+                if let jsons = units {
+                    debugPrint(jsons)
+                    self.dataStack.sync(jsons, inEntityNamed: "Units", completion: { (error) in
+                        if error != nil {
+                            debugPrint("error = \(String(describing: error))")
+                        } else {
+                            KRProgressHUD.showSuccess()
+                            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Units")
+                            request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+                            self.items = (try! self.dataStack.viewContext.fetch(request)) as! [NSManagedObject]
+
+                        }
+                    })
                 }
             })
         }
     }
     
-    private var units : [Unit]? {
-        didSet {
-            self.token.text = units?.first?.name
-        }
-    }
+
     
     @IBOutlet weak var token: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        KRProgressHUD.show()
+        
         self.token.text = ""
         let params = [
             "email" : "mobile@gmail.com",

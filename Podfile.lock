@@ -5,18 +5,21 @@ PODS:
     - ObjectMapper (~> 2.0)
   - KRProgressHUD (2.2.2)
   - ObjectMapper (2.2.5)
+  - Sync (3.2.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireObjectMapper
   - KRProgressHUD
+  - Sync (~> 3)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   KRProgressHUD: ee25f70e274d1933b2ad0c8583a8552a349ce85d
   ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  Sync: 70ba21675235ea8960e9033611cd2ebd0131adf2
 
-PODFILE CHECKSUM: 6154e28ef84aaa633e6d9978c9164f8585d1f502
+PODFILE CHECKSUM: 30d5a70ddc59e9f2d684b0bf8eabf5a0b8e7d628
 
 COCOAPODS: 1.2.1

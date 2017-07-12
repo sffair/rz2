@@ -9,110 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "rz2/Model/Company.swift"
-            timestampString = "521523389.950422"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "getUnits(token:completionBlock:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "rz2.Company.(getUnits (token : Swift.String, completionBlock : (Swift.Optional&lt;Swift.Array&lt;rz2.Unit&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "rz2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sperotto/Developer/Rz2/rz2/rz2/Model/Company.swift"
-                  timestampString = "521523550.89856"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "518">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "rz2.Company.(getUnits (token : Swift.String, completionBlock : (Swift.Optional&lt;Swift.Array&lt;rz2.Unit&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "rz2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sperotto/Developer/Rz2/rz2/rz2/Model/Company.swift"
-                  timestampString = "521523550.901653"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "840">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "rz2/Controller/LoginViewController.swift"
-            timestampString = "521523550.804567"
+            timestampString = "521559894.94462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "company"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "rz2/Model/Company.swift"
-            timestampString = "521523050.675877"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "getUnits(token:completionBlock:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "rz2.Company.(getUnits (token : Swift.String, completionBlock : (Swift.Optional&lt;Swift.Array&lt;rz2.Unit&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "rz2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sperotto/Developer/Rz2/rz2/rz2/Model/Company.swift"
-                  timestampString = "521523550.921103"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "rz2.Company.(getUnits (token : Swift.String, completionBlock : (Swift.Optional&lt;Swift.Array&lt;rz2.Unit&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "rz2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sperotto/Developer/Rz2/rz2/rz2/Model/Company.swift"
-                  timestampString = "521523550.923872"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "483">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
