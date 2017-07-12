@@ -7,12 +7,32 @@
 //
 
 import UIKit
+import CoreData
+import Sync
+
+struct Cells {
+    static let Unit = "unitCell"
+}
 
 class UnitsTableViewController: UITableViewController {
 
+    //MARK: - Models
+    let store = Store()
+    var items = [NSManagedObject]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    //MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let units = self.store.fetch() {
+            self.items = units
+        }
+        
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,32 +40,32 @@ class UnitsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.items.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: Cells.Unit, for: indexPath) as? UnitTableViewCell {
+            if let name = self.items[indexPath.row].value(forKey: "name") as? String {
+                cell.name = name
+                return cell
+            }
+        }
 
         // Configure the cell...
 
-        return cell
+        return UITableViewCell()
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

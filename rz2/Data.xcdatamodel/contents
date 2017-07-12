@@ -12,9 +12,6 @@
         <attribute name="nameEs" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="unit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Units" inverseName="country" inverseEntity="Units" syncable="YES"/>
     </entity>
-    <entity name="Data" representedClassName="Array" syncable="YES">
-        <relationship name="units" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Units" syncable="YES"/>
-    </entity>
     <entity name="State" representedClassName="State" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -46,7 +43,6 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="unit" inverseEntity="City" syncable="YES"/>
         <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="unit" inverseEntity="Country" syncable="YES"/>
-        <relationship name="data" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Data" syncable="YES"/>
         <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="unit" inverseEntity="State" syncable="YES"/>
         <userInfo>
             <entry key="hyper_remoteKey" value="regions_ids"/>
@@ -56,7 +52,6 @@
         <element name="City" positionX="196" positionY="-117" width="128" height="88"/>
         <element name="Country" positionX="196" positionY="-9" width="119" height="118"/>
         <element name="State" positionX="189" positionY="117" width="128" height="90"/>
-        <element name="Units" positionX="-126" positionY="-118" width="128" height="268"/>
-        <element name="Data" positionX="-371" positionY="-15" width="128" height="58"/>
+        <element name="Units" positionX="-126" positionY="-118" width="128" height="253"/>
     </elements>
 </model>

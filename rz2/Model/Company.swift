@@ -15,13 +15,13 @@ class Company : Mappable {
     var id : Int = 0
     var token : String = ""
     var name : String = ""
-    var company_id : Int = 0
-    var has_gps : Bool = false
-    var days_to_expired_access : String = ""
-    var has_unit_type : Bool = false
-    var has_unit_qr_code : Bool = false
-    var unit_alias : String = ""
-    var access : String = ""
+    var company_id : Int?
+    var has_gps : Bool?
+    var days_to_expired_access : String?
+    var has_unit_type : Bool?
+    var has_unit_qr_code : Bool?
+    var unit_alias : String?
+    var access : String?
     
     required convenience init?(map: Map) {
         self.init()
@@ -41,6 +41,8 @@ class Company : Mappable {
     }
     
     
+    // MARK: - WS Methods
+    // métodos de login que recebe email e senha por parametro
     static func login(params: [String : Any], completionBlock: @escaping CompanyCompletionBlock){
         let request = API.POST(params)
         request.responseJSON { (response: DataResponse<Any>) in
@@ -56,8 +58,9 @@ class Company : Mappable {
         }
     }
     
-    func getUnits(token: String, completionBlock: @escaping UnitsCompletionBlock) {
-        let request = API.GET(token: token)
+    // busca as unidades do WS com o token na header
+    func getUnits(completionBlock: @escaping UnitsCompletionBlock) {
+        let request = API.GET(token: self.token)
         request.responseJSON { (response: DataResponse<Any>) in
             if let result = response.result.value as? [String : Any] {
                 if let data = result["data"] as? [String : Any] {
@@ -73,6 +76,3 @@ class Company : Mappable {
     
     
 }
-
-typealias CompanyCompletionBlock = (_ company: Company?, _ error: Error?) -> Void
-typealias UnitsCompletionBlock = (_ units: [[String : Any]]?, _ error: Error?) -> Void

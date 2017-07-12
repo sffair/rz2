@@ -11,74 +11,111 @@ import Sync
 import CoreData
 import KRProgressHUD
 
+
+//MARK: - Structs
+struct Segues {
+    static let Units = "unitsTableViewSegue"
+}
+
+struct LoginCredentials {
+    static let email = "mobile@gmail.com"
+    static let password = "1234"
+}
+
 class LoginViewController: UIViewController {
 
-    lazy var dataStack: DataStack = DataStack(modelName: "Data")
+    //MARK: - IBOutlets
+    @IBOutlet weak var logoImage: UIImageView!
     
+    //MARK: - Models
     var items = [NSManagedObject]()
-    
     private var company : Company? {
         didSet {
-            self.company?.getUnits(token: (self.company?.token)!, completionBlock: { (units, error) in
-                if let jsons = units {
-                    debugPrint(jsons)
-                    self.dataStack.sync(jsons, inEntityNamed: "Units", completion: { (error) in
-                        if error != nil {
-                            debugPrint("error = \(String(describing: error))")
-                        } else {
-                            KRProgressHUD.showSuccess()
-                            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Units")
-                            request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
-                            self.items = (try! self.dataStack.viewContext.fetch(request)) as! [NSManagedObject]
-
-                        }
-                    })
-                }
-            })
+            self.getUnits()
         }
     }
     
+    //MARK: - Vars
+    //variaveis para controle de finalização da animação
+    var animationCompleted : Bool = false
+    var objectsFinishedFetch : Bool = false
 
-    
-    @IBOutlet weak var token: UILabel!
+    //MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        KRProgressHUD.show()
-        
-        self.token.text = ""
+        self.beginAnimation()
+        self.doLogin(email: LoginCredentials.email, password: LoginCredentials.password)
+    }
+    
+    //MARK: - Actions
+    //Realiza login com as credenciais pertencentes a struct LoginCredentials
+    func doLogin(email: String, password: String) {
         let params = [
-            "email" : "mobile@gmail.com",
-            "password" : "1234"
+            "email" : email,
+            "password" : password
         ]
-        
         Company.login(params: params, completionBlock: {
             (company, error) in
-            debugPrint(error)
-            debugPrint(company)
-            
             if error == nil {
                 self.company = company
             }
         })
-        
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //Após login feito, para buscar as unidades, realiza um get pelo modelo da company que passa o token no header e persiste os dados no CoreData e termina a animação
+    func getUnits() {
+        self.company?.getUnits() {
+            (units, error) in
+            if let jsons = units {
+                debugPrint(jsons)
+                let store = Store()
+                store.save(Json: jsons, completionBlock: { (success, error) in
+                    if success {
+                        if self.animationCompleted {
+                            self.completeAnimation()
+                        } else {
+                            self.objectsFinishedFetch = true
+                        }
+                    }
+                })
+            }
+        }
     }
-    */
+
+    //MARK: - Animation
+    //Animação enquanto está sendo realizada as chamadas de login e buscar unidades do WS
+    func beginAnimation() {
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0,
+            options: UIViewAnimationOptions.curveEaseOut,
+            animations: {
+                self.logoImage.alpha = 1
+        }) {
+            completed in
+            if completed {
+                if self.objectsFinishedFetch {
+                    self.completeAnimation()
+                } else {
+                    self.animationCompleted = true
+                }
+            }
+        }
+    }
+    
+    func completeAnimation(){
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0,
+            options: UIViewAnimationOptions.curveEaseIn,
+            animations: {
+                self.logoImage.alpha = 0
+        }){
+            completed in
+            self.performSegue(withIdentifier: Segues.Units, sender: nil)
+        }
+    }
+    
+    
 
 }

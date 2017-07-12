@@ -5,6 +5,8 @@
 //  Created by Fabrício Sperotto Sffair on 2017-07-11.
 //  Copyright © 2017 Fabrício Sperotto Sffair. All rights reserved.
 //
+//  API contendo as chamadas GET e POST necessárias para o projeto, utilizando Alamofire
+//
 
 import Foundation
 import UIKit

@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "rz2/Controller/LoginViewController.swift"
-            timestampString = "521559894.94462"
+            filePath = "rz2/CoreData/Store.swift"
+            timestampString = "521569344.501863"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "company"
-            landmarkType = "24">
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetch()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

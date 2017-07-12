@@ -10,6 +10,8 @@
 		199CE4FB1F164A8B00712367 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CE4FA1F164A8B00712367 /* CoreData.framework */; };
 		199CE5021F16538A00712367 /* Data.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 199CE5011F16538A00712367 /* Data.xcdatamodel */; };
 		199CE5041F165BA500712367 /* UnitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CE5031F165BA500712367 /* UnitsTableViewController.swift */; };
+		199CE5061F1671AA00712367 /* UnitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CE5051F1671AA00712367 /* UnitTableViewCell.swift */; };
+		199CE5091F1677A800712367 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CE5081F1677A800712367 /* Store.swift */; };
 		19E327161F1596DA0035CE9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E327151F1596DA0035CE9E /* AppDelegate.swift */; };
 		19E3271B1F1596DA0035CE9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E327191F1596DA0035CE9E /* Main.storyboard */; };
 		19E3271D1F1596DA0035CE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E3271C1F1596DA0035CE9E /* Assets.xcassets */; };
@@ -42,8 +44,10 @@
 
 /* Begin PBXFileReference section */
 		199CE4FA1F164A8B00712367 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		199CE5011F16538A00712367 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		199CE5011F16538A00712367 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Data.xcdatamodel; path = ../Data.xcdatamodel; sourceTree = "<group>"; };
 		199CE5031F165BA500712367 /* UnitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsTableViewController.swift; sourceTree = "<group>"; };
+		199CE5051F1671AA00712367 /* UnitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTableViewCell.swift; sourceTree = "<group>"; };
+		199CE5081F1677A800712367 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		19E327121F1596DA0035CE9E /* rz2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rz2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E327151F1596DA0035CE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E3271A1F1596DA0035CE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		199CE5071F16773800712367 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				199CE5011F16538A00712367 /* Data.xcdatamodel */,
+				199CE5081F1677A800712367 /* Store.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		19E327091F1596DA0035CE9E = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +139,7 @@
 		19E327141F1596DA0035CE9E /* rz2 */ = {
 			isa = PBXGroup;
 			children = (
+				199CE5071F16773800712367 /* CoreData */,
 				19E3274B1F15A98A0035CE9E /* WebService */,
 				19E327461F15A2410035CE9E /* Utils */,
 				19E327431F15A2230035CE9E /* Controller */,
@@ -136,7 +150,6 @@
 				19E3271C1F1596DA0035CE9E /* Assets.xcassets */,
 				19E3271E1F1596DA0035CE9E /* LaunchScreen.storyboard */,
 				19E327211F1596DA0035CE9E /* Info.plist */,
-				199CE5011F16538A00712367 /* Data.xcdatamodel */,
 			);
 			path = rz2;
 			sourceTree = "<group>";
@@ -179,6 +192,7 @@
 		19E327451F15A2230035CE9E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				199CE5051F1671AA00712367 /* UnitTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,8 +414,10 @@
 				19E327161F1596DA0035CE9E /* AppDelegate.swift in Sources */,
 				199CE5041F165BA500712367 /* UnitsTableViewController.swift in Sources */,
 				19E3274D1F15A9DC0035CE9E /* API.swift in Sources */,
+				199CE5091F1677A800712367 /* Store.swift in Sources */,
 				199CE5021F16538A00712367 /* Data.xcdatamodel in Sources */,
 				19E327481F15A2540035CE9E /* Constants.swift in Sources */,
+				199CE5061F1671AA00712367 /* UnitTableViewCell.swift in Sources */,
 				19E3274F1F15B2330035CE9E /* LoginViewController.swift in Sources */,
 				19E327511F15B2A20035CE9E /* Company.swift in Sources */,
 			);

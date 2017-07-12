@@ -5,6 +5,8 @@
 //  Created by Fabrício Sperotto Sffair on 2017-07-11.
 //  Copyright © 2017 Fabrício Sperotto Sffair. All rights reserved.
 //
+//  Constantes e typealias necessárias para o projeto
+//
 
 import UIKit
 
@@ -17,6 +19,11 @@ public struct EndPoints {
     static let Units = "/units"
 }
 
+public struct CoreDataSettings {
+    static let Entity = "Units"
+    static let ModelName = "Data"
+}
+
 struct Colors {
     
     static let orangeApp   = UIColor(red: 255.0/255.0, green: 90.0/255.0, blue: 0, alpha: 1)
@@ -25,3 +32,7 @@ struct Colors {
 }
 
 
+
+typealias CompanyCompletionBlock = (_ company: Company?, _ error: Error?) -> Void
+typealias UnitsCompletionBlock = (_ units: [[String : Any]]?, _ error: Error?) -> Void
+typealias SuccessCompletionBlock = (_ success: Bool, _ error: Error?) -> Void
