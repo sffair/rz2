@@ -5,7 +5,9 @@
 //  Created by Fabrício Sperotto Sffair on 2017-07-12.
 //  Copyright © 2017 Fabrício Sperotto Sffair. All rights reserved.
 //
-//  Modelo criado para armazenar e buscar dados do coredata
+//  Modelo criado para armazenar e buscar dados do coredata. 
+//  No Store foi apenas implementado o necessário para a realização do teste ao invés de implementar
+//  uma estrutura mais escalável e segura utilizando Generics.
 //
 
 import Sync
